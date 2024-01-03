@@ -14,13 +14,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/ClaseUsuario")
+@RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class ControladorUsuario {
 
-    private final ServicioUsuario servicioUsuario;
 
-    @PostMapping
+    @PostMapping(value = "demo")
+    public String welcome(){
+
+        return "welcome";
+    }
+
+  /* private final ServicioUsuario servicioUsuario;
+
+   @PostMapping
     public void createUsuario(@RequestBody ClaseUsuario usuario){
 
         servicioUsuario.createUsuario(usuario);
@@ -30,8 +37,7 @@ public class ControladorUsuario {
     @GetMapping
     public Iterable<ClaseUsuario> buscarUsuario(){
         return servicioUsuario.buscarUsuario();
-    }
-
+    }*/
 
 
 }
