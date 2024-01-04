@@ -18,26 +18,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequiredArgsConstructor
 public class ControladorUsuario {
 
+   private final ServicioUsuario servicioUsuario;
 
-    @PostMapping(value = "demo")
-    public String welcome(){
-
-        return "welcome";
-    }
-
-  /* private final ServicioUsuario servicioUsuario;
-
-   @PostMapping
+  /* @PostMapping 
     public void createUsuario(@RequestBody ClaseUsuario usuario){
 
         servicioUsuario.createUsuario(usuario);
 
-    }
+    }*/
 
-    @GetMapping
+    @GetMapping(value = "users")
     public Iterable<ClaseUsuario> buscarUsuario(){
         return servicioUsuario.buscarUsuario();
-    }*/
+    }
 
 
 }
