@@ -18,7 +18,6 @@ public class RegisterRequest {
     private String lastName;
     private LocalDate dateBirth;
     private String address;
-    private String token; 
     private String password;
     private String mobilePhone;
     private String email;
